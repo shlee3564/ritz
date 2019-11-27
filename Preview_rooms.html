@@ -166,7 +166,7 @@
         .RESERVATION_Box2{float: left; width: 50%;position: relative; left: 18%;}
         
         /*버튼효과*/
-        button.slide_button{
+        .slide_button{
             color: #f9f9f9;
             border: 2px solid #f9f9f9;
             width: 200px;
@@ -180,15 +180,17 @@
             cursor: pointer;
             border-radius: 2px;
             background: none;
+            display: block;
             box-shadow: inset 0 0 0 0 #5a4538;
             transition: all 1.5s;
             -webkit-transition:all 1.5s;
             -moz-transform:all 1.5s;
             -ms-transform:all 1.5s;
             -o-transform:all 1.5s;
+            text-align: center; line-height: 50px;
         }
 
-        button.slide_button:hover {
+        .slide_button:hover {
           box-shadow: inset 100vmax 0 0 0 #5a4538;
           border:none;
           width: 200px;
@@ -203,6 +205,13 @@
         
         
         /*미디어쿼리*/
+        
+        @media screen and (-ms-high-contrast:active), all and (-ms-high-contrast:none){
+            .slide_button:hover {border: 2px solid #f9f9f9;}
+
+            
+        }
+        
         @media all and (min-width:1025px) and (max-width:1700px){
             .Room_Subtxt {top: 50px;}
             .Room_Subtxt_title {text-align: center;}
@@ -319,12 +328,18 @@
             .RESERVATION_Box1 span{top: 40px; left: 30%; font-size: 10px;}
             .RESERVATION_Box2{width: 60%; left: 15%;}
              
-            button.slide_button{
-            width: 100px;
-            font-size: 12px;
-            height: 30px;
-            margin-top: 55px;
-        }
+            
+            .slide_button{
+                width: 100px;
+                font-size: 12px;
+                height: 30px;
+                line-height: 30px;
+            }
+
+            .slide_button:hover {
+              width: 100px;
+              height: 30px;
+            }
 
 
 
@@ -918,7 +933,7 @@
             <span>@ Ritz Hotel Seoul</span>
         </div>
         <div class="RESERVATION_Box2">
-            <button class="slide_button"><a href="Preview_reservation.html">예약바로가기</a></button>
+            <a href="Preview_reservation.html" class="slide_button">예약바로가기</a>
         </div>
         </div>     
 
